@@ -8,5 +8,25 @@
     <body>
         <noscript>Please enable JavaScript</noscript>
         <h1>Login to see shopping list</h1>
+        <form id="loginForm">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <script src="./sources/js/LoginDefaults.js"></script>
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const passwordInput = document.getElementById('password').value;
+                const correctPassword = 'yourCorrectPassword'; // Replace with the actual password from LoginDefaults.js
+
+                if (passwordInput === correctPassword) {
+                    document.cookie = "UserLogged=true; path=/";
+                    window.location.href = "index.html";
+                } else {
+                    alert('Incorrect password. Please try again.');
+                }
+            });
+        </script>
     </body>
 </html>
