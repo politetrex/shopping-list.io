@@ -9,7 +9,10 @@
     <body>
         <noscript>Please enable JavaScript</noscript>
         <div id="app">
-            
+            <p>Shopping List</p>
+            <div id="contents">
+                
+            </div>
         </div>
         <div id="delete-folder-alert" style="display: none;">
             <p>Are you sure you want to delete this folder and all its contents?</p>
@@ -31,6 +34,23 @@
         templates
         <div class="folder">
             <p class="folder-name">Folder Name</p>
+            <li>
+                <div class="item">
+                    <pre class="item-content">Item Content</pre>
+                    <span class="item-actions" style="display: none;">
+                        <button class="edit-item" title="Edit Item">✎</button>
+                        <button class="delete-item" title="Delete Item">x</button>
+                    </span>
+                </div>
+            </li>
+        </div>
+        -->
+        <!--
+        template 2 -- text-based
+        folder
+        ╠ folder 2
+        ║ ╚ Item
+        ╚ Item
         -->
     </body>
 </html>
